@@ -1,0 +1,56 @@
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+ol,
+ul {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  color: $black;
+  list-style: disc;
+  width: 80%;
+  margin: 5rem auto;
+
+  @include mq($bp-xs) {
+		font-size: 1.5rem;
+		line-height: 2.5rem;
+		margin: 2.5rem auto;
+	}
+
+}
+
+/*--------------------------------------------------------------
+# Figure / Image
+--------------------------------------------------------------*/
+figure {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+
+    &.desktop {
+      display: inline;
+    }
+
+    &.mobile {
+      display: none;
+    }
+
+    @include mq($bp-xs){
+
+      &.desktop {
+        display: none;
+      }
+
+      &.mobile {
+        display: inline;
+      }
+
+    }
+
+  }
+}

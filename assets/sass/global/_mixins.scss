@@ -1,0 +1,105 @@
+/*--------------------------------------------------------------
+# Justify Inline Block Elements
+--------------------------------------------------------------*/
+@mixin justify($vertical-align: top) {
+  text-align: justify !important;
+	text-justify: inter-ideograph;
+	font-size: 0px;
+	& > * {
+		display: inline-block;
+		vertical-align: $vertical-align;
+		text-align: left;
+  }
+	&:after {
+		content: '';
+		width: 100%;
+		display: inline-block;
+  }
+}
+
+/*--------------------------------------------------------------
+# Media queries
+--------------------------------------------------------------*/
+@mixin mq($breakpoint, $min-max: max-width) {
+  @media all and ($min-max: $breakpoint){
+    @content;
+  }
+}
+
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 2){
+    @content;
+  }
+}
+
+/*--------------------------------------------------------------
+# Transition
+--------------------------------------------------------------*/
+@mixin transition($target: all, $time: .2s, $ease: ease-in-out) {
+  -webkit-transition: $target $time $ease;
+  -moz-transition: $target $time $ease;
+  -ms-transition: $target $time $ease;
+  transition: $target $time $ease;
+}
+
+/*--------------------------------------------------------------
+# Transform
+--------------------------------------------------------------*/
+@mixin transform($properties) {
+  -webkit-transform: $properties;
+  -moz-transform: $properties;
+  -ms-transform: $properties;
+  transform: $properties;
+}
+
+/*--------------------------------------------------------------
+# Flexbox
+--------------------------------------------------------------*/
+@mixin display-flex($direction: row, $align: flex-start, $wrap: wrap, $justify: space-between) {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  flex-direction: $direction;
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+
+  -webkit-box-align: $align;
+  -moz-box-align: $align;
+  -webkit-align-items: $align;
+  -ms-flex-align: $align;
+  align-items: $align;
+  flex-align: $align;
+
+  flex-wrap: $wrap;
+  -webkit-flex-wrap: $wrap;
+   -ms-flex-wrap: $wrap;
+
+  @if $justify == space-between {
+    -ms-flex-pack: justify;
+  }
+    @else {
+    -ms-flex-pack: $justify;
+  }
+}
+
+/*--------------------------------------------------------------
+# Flexbox child
+--------------------------------------------------------------*/
+@mixin flex-child($flex-value, $order: auto) {
+  -webkit-box-flex: $flex-value;
+  -moz-box-flex: $flex-value;
+  -webkit-flex: $flex-value;
+  -ms-flex: $flex-value;
+  flex: $flex-value;
+
+  -webkit-order: $order;
+  -ms-flex-order: $order;
+  order: $order;
+}

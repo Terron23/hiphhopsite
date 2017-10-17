@@ -1,0 +1,60 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+	// TODO: Define default font here.
+	text-rendering: optimizeLegibility;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	cursor: default;
+}
+
+html {
+	font-size: 10px;
+}
+
+/*--------------------------------------------------------------
+# Headings (h1 through h6)
+--------------------------------------------------------------*/
+
+h1, 
+ h2, 
+ h3, 
+ h4, 
+ h5 { 
+     @include font-oswald; 
+    text-transform: uppercase;    
+ }
+h1 { 
+    font-size: 26rem; 
+    line-height: 1;
+    text-shadow: 3px 7px black;  
+    } 
+h2 { 
+    font-size: 48px; 
+    line-height: 1; 
+}
+h3 { 
+    font-size: 2.8rem; 
+    line-height: 1; 
+    
+    }
+h4 {
+
+}
+
+/*--------------------------------------------------------------
+# Paragraph
+--------------------------------------------------------------*/
+
+p { 
+    @include font-slabo; 
+    font-size: 2.2rem; 
+    line-height: 3rem;
+    margin-bottom: 40px;
+}
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/

@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Font Mixins
+----------------------------------------------------------------
+EG:
+@mixin serif($weight: regular) {
+  @if $weight == regular {
+    font-family: 'MyFontFace', 'Times', serif;
+  }
+  @else if $weight == bold {
+    font-family: 'MyFontFaceBold', 'Times', serif;
+  }
+  @else if $weight == italic {
+    font-family: 'MyFontFaceItalic', 'Times', serif;
+  }
+} */
+
+@mixin font-oswald($weight: 900) {
+  font-family: 'Oswald', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin font-slabo($weight: 400) {
+  font-family: 'Slabo 27px', sans-serif;
+  font-weight: $weight;
+  
+}
+
+/*--------------------------------------------------------------
+# Font Imports
+--------------------------------------------------------------
+EG:
+@font-face {
+  font-family: 'MyFontFace';
+  src: url('fonts/MyFontFace/regular.otf') format('opentype');
+  src: url('fonts/MyFontFace/regular.woff') format('woff');
+} */

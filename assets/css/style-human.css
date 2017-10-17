@@ -1,0 +1,417 @@
+/*--------------------------------------------------------------
+# Global Styles
+--------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+
+hr {
+  border: none;
+}
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media Queries / Breakpoints
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Justify Inline Block Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Media queries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Transition
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Transform
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Flexbox
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Flexbox child
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Font Mixins
+----------------------------------------------------------------
+EG:
+@mixin serif($weight: regular) {
+  @if $weight == regular {
+    font-family: 'MyFontFace', 'Times', serif;
+  }
+  @else if $weight == bold {
+    font-family: 'MyFontFaceBold', 'Times', serif;
+  }
+  @else if $weight == italic {
+    font-family: 'MyFontFaceItalic', 'Times', serif;
+  }
+} */
+/*--------------------------------------------------------------
+# Font Imports
+--------------------------------------------------------------
+EG:
+@font-face {
+  font-family: 'MyFontFace';
+  src: url('fonts/MyFontFace/regular.otf') format('opentype');
+  src: url('fonts/MyFontFace/regular.woff') format('woff');
+} */
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+}
+
+html {
+  font-size: 10px;
+}
+
+/*--------------------------------------------------------------
+# Headings (h1 through h6)
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  
+}
+
+h1 {
+  font-size: 26rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 2.8rem;
+  line-height: 1;
+}
+
+/*--------------------------------------------------------------
+# Paragraph
+--------------------------------------------------------------*/
+p {
+  font-family: 'Slabo 27px', sans-serif;
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  margin-bottom: 40px;
+}
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Body
+--------------------------------------------------------------*/
+body,
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*--------------------------------------------------------------
+# Body - Content Wrap
+--------------------------------------------------------------*/
+.asap-wrap {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.asap-container {
+  display: block;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Page Footer
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Lists
+--------------------------------------------------------------*/
+ol,
+ul {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  margin-bottom: 3rem;
+  color: #000000;
+  list-style: disc;
+  width: 80%;
+  margin: 5rem auto;
+}
+@media all and (max-width: 670px) {
+  ol,
+  ul {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin: 2.5rem auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Figure / Image
+--------------------------------------------------------------*/
+figure {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+figure img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+figure img.desktop {
+  display: inline;
+}
+figure img.mobile {
+  display: none;
+}
+@media all and (max-width: 670px) {
+  figure img.desktop {
+    display: none;
+  }
+  figure img.mobile {
+    display: inline;
+  }
+}
+
+/*--------------------------------------------------------------
+# Form Styles
+--------------------------------------------------------------*/
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*--------------------------------------------------------------
+# Modules
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Home page Hero
+--------------------------------------------------------------*/
+#asap-hero {
+  min-height: 100vh;
+  background: url("/assets/images/hero_bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+#asap-hero h1 {
+  width: 100%;
+  font-size: 28rem;
+  text-align: center;
+  color: #FFF;
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1200px) {
+  #asap-hero h1 {
+    font-size: 20rem;
+  }
+}
+@media (max-width: 750px) {
+  #asap-hero h1 {
+    font-size: 9rem;
+    bottom: auto;
+    top: 40px;
+  }
+}
+#asap-hero h3 {
+  text-align: center;
+  color: #FFF;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 750px) {
+  #asap-hero h3 {
+    top: 20px;
+    left: auto;
+    transform: none;
+    right: 20px;
+    text-align: right;
+  }
+}
+
+/*--------------------------------------------------------------
+# Album CTA
+--------------------------------------------------------------*/
+#album-cta {
+  background: #000;
+  color: #FFF;
+  padding: 160px 0;
+}
+@media all and (max-width: 1024px) {
+  #album-cta {
+    padding: 60px 0;
+  }
+}
+#album-cta .album-grid {
+  display: table;
+  width: 100%;
+  height: auto;
+}
+@media all and (max-width: 1024px) {
+  #album-cta .album-grid {
+    display: block;
+  }
+}
+#album-cta .album-grid__image, #album-cta .album-grid__copy {
+  display: table-cell;
+  width: 50%;
+}
+@media all and (max-width: 1024px) {
+  #album-cta .album-grid__image, #album-cta .album-grid__copy {
+    display: block;
+    width: 100%;
+  }
+}
+@media all and (max-width: 1024px) {
+  #album-cta .album-grid__image {
+    text-align: center;
+  }
+}
+#album-cta .album-grid__image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+#album-cta .album-grid__copy {
+  padding-left: 10%;
+  vertical-align: middle;
+}
+@media all and (max-width: 1024px) {
+  #album-cta .album-grid__copy {
+    padding-left: 0;
+    padding-top: 40px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#album-cta .album-grid__copy h4 {
+  margin-bottom: 5px;
+}
+#album-cta .album-grid__copy h2 {
+  margin-bottom: 30px;
+}
+#album-cta .album-grid__link {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: #FFF;
+  text-transform: uppercase;
+}
+#album-cta .album-grid__link:hover {
+  text-decoration: none;
+  color: #FFF;
+}
